@@ -18,8 +18,10 @@ const specialCharCodes = arrayFromLowToHigh(33, 47).concat(
   arrayFromLowToHigh(123, 126)
 )
 
+// function to order cycle through approved char codes
 function arrayFromLowToHigh(low, high) {
   const array = []
+  // for loop used to cycle through character codes and push to array
   for (let i = low; i <= high; i++) {
     array.push(i)
   }
@@ -66,31 +68,24 @@ function generatePassword() {
   console.log(specialConfirm);
   console.log(charCode);
   
-  // For loop and array to randomzie char code being selected for charCode array
+  // For loop 
+  // PasswordChars array created to collect randomzied char code
   passwordChars = []
   for (let i = 0; i < charAmount; i++) {
     var passwordCodes = charCode[Math.floor(Math.random() * charCode.length)]
   passwordChars.push(String.fromCharCode(passwordCodes));
   }
-
-  //return passwordChars.join('');
-  console.log(passwordChars);
-  //return(charAmount, upperCaseConfirm, lowerCaseConfirm, numbersConfirm, specialConfirm, charCode);
-
 };
-
-generatePassword();
-
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  generatePassword();
   var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
+  // Added .join('') to combine display values without commas
+  passwordText.value = passwordChars.join('');
 
 }
 
