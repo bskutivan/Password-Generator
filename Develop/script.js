@@ -66,7 +66,12 @@ function generatePassword() {
   console.log(specialConfirm);
   console.log(charCode);
   
-
+  const passwordChars = []
+  for (let i = 0; i < charAmount; i++) {
+    const characters = charCode[Math.floor(Math.random() * charAmount)]
+    passwordChars.push()
+  }
+  console.log(passwordChars);
   return(charAmount, upperCaseConfirm, lowerCaseConfirm, numbersConfirm, specialConfirm, charCode);
 
 };
