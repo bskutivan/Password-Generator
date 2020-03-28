@@ -74,7 +74,7 @@ function generatePassword() {
   }
 
   //return passwordChars.join('');
-  //console.log(passwordChars);
+  console.log(passwordChars);
   //return(charAmount, upperCaseConfirm, lowerCaseConfirm, numbersConfirm, specialConfirm, charCode);
 
 };
