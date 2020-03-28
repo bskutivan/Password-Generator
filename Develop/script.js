@@ -37,10 +37,10 @@ function generatePassword() {
   if (charAmount >= 8 && charAmount <= 44) {
     console.log(charAmount)
   }
-  else {
-    alert("Please input an amount greater than 8 characters and less than 45 characters.");
-    // return to start of function to get correct input
-    generatePassword();
+    else {
+      alert("Please input an amount greater than 8 characters and less than 45 characters.");
+      // return to start of function to get correct input
+      generatePassword();
   }
   // Confirm for uppercase
   var upperCaseConfirm = confirm("Would you like uppercase letters in your password?");
@@ -66,13 +66,16 @@ function generatePassword() {
   console.log(specialConfirm);
   console.log(charCode);
   
-  const passwordChars = []
+  // For loop and array to randomzie char code being selected for charCode array
+  passwordChars = []
   for (let i = 0; i < charAmount; i++) {
-    const characters = charCode[Math.floor(Math.random() * charAmount)]
-    passwordChars.push()
+    var passwordCodes = charCode[Math.floor(Math.random() * charCode.length)]
+  passwordChars.push(String.fromCharCode(passwordCodes));
   }
-  console.log(passwordChars);
-  return(charAmount, upperCaseConfirm, lowerCaseConfirm, numbersConfirm, specialConfirm, charCode);
+
+  //return passwordChars.join('');
+  //console.log(passwordChars);
+  //return(charAmount, upperCaseConfirm, lowerCaseConfirm, numbersConfirm, specialConfirm, charCode);
 
 };
 
