@@ -69,7 +69,6 @@ function generatePassword() {
 
   return(charAmount, upperCaseConfirm, lowerCaseConfirm, numbersConfirm, specialConfirm, charCode);
 
- 
 };
 
 generatePassword();
