@@ -26,29 +26,42 @@ function arrayFromLowToHigh(low, high) {
   return array
 }
 
-function generatePassword(charAmount, uppercaseConfirm, lowercaseConfirm, numbersConfirm, symbolsConfirm) {
+
+
+function generatePassword(charAmount, upperCaseConfirm, lowerCaseConfirm, numbersConfirm, specialConfirm) {
 // Prompt to ask how many characters
-  
-  // capture response
+
+  var charAmount = prompt("How many characters would you like in the password? Password can be as short as 8 characters or as long as 44 characters.");
   // if < 8, prompt user to put in a number greater than 8 and < 45
-  // return to start of function to get correct input
 
+  if (charAmount < 8 || charAmount > 45) {
+    alert("Please input an amount greater than 8 characters and less than 45 characters.");
+    // return to start of function to get correct input
+    generatePassword();
+  }
+  // Confirm for uppercase
+  var upperCaseConfirm = confirm("Would you like uppercase letters in your password?");
+  if (upperCaseConfirm) {
 
+  }
+  // Confirm for lowercase
+  var lowerCaseConfirm = confirm("Would you like lowercase letters in your password?");
+  if (lowerCaseConfirm) {
 
-// Confirm for lowercase
-  // capture response
+  }
+  // Confirm for numeric
+  var numbersConfirm = confirm("Would you like numbers in your password?");
+  if (numbersConfirm) {
 
-// Confirm for uppercase
-  // capture response
+  }
+  // Confirm for special characters
+  var specialConfirm = confirm("Would you like special characters in your password?");
+  if (specialConfirm) {
 
-// Confirm for numeric
-  // capture response
-
-// Confirm for special characters
-  // capture response
+  }
 };
 
-// generatePassword();
+generatePassword();
 
 
 // Get references to the #generate element
