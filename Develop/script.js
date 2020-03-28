@@ -30,7 +30,7 @@ function arrayFromLowToHigh(low, high) {
 
 function generatePassword() {
 // Prompt to ask how many characters
-  var charCode = upperCaseCharCodes, lowerCaseCharCodes, numberCharCodes, specialCharCodes;
+  var charCode = [];
   var charAmount = prompt("How many characters would you like in the password? Password can be as short as 8 characters or as long as 44 characters.");
   // if < 8, prompt user to put in a number greater than 8 and < 45
 
@@ -50,9 +50,10 @@ function generatePassword() {
   
   // Confirm for lowercase
   var lowerCaseConfirm = confirm("Would you like lowercase letters in your password?");
-  if (lowerCaseConfirm) {
+  if (lowerCaseConfirm) charCode = charCode.concat(lowerCaseCharCodes);
   console.log(lowerCaseConfirm);
-  }
+  console.log(charCode);
+  
   // Confirm for numeric
   var numbersConfirm = confirm("Would you like numbers in your password?");
   if (numbersConfirm) {
