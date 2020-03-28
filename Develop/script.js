@@ -56,9 +56,10 @@ function generatePassword() {
   
   // Confirm for numeric
   var numbersConfirm = confirm("Would you like numbers in your password?");
-  if (numbersConfirm) {
-  console.log(numbersConfirm)
-  }
+  if (numbersConfirm) charCode = charCode.concat(numberCharCodes);
+  console.log(numbersConfirm);
+  console.log(charCode);
+  
   // Confirm for special characters
   var specialConfirm = confirm("Would you like special characters in your password?");
   if (specialConfirm) {
