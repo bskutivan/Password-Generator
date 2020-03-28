@@ -62,9 +62,10 @@ function generatePassword() {
   
   // Confirm for special characters
   var specialConfirm = confirm("Would you like special characters in your password?");
-  if (specialConfirm) {
+  if (specialConfirm) charCode = charCode.concat(specialCharCodes);
   console.log(specialConfirm);
-  }
+  console.log(charCode);
+  
 
   return(charAmount, upperCaseConfirm, lowerCaseConfirm, numbersConfirm, specialConfirm, charCode);
 
